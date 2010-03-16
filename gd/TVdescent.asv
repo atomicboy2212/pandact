@@ -1,0 +1,31 @@
+function [] = TVdescent
+
+
+
+
+
+%  function gradf = gradFun(x,Dv,Dh)
+%      maxiter = length(x);
+%      gradf = zeros(maxiter,1);
+%      for i =1 :maxiter
+%        Dhx = Dh(i,:)* x;
+%        Dvx = Dh(i,:)* x;
+%        s = sqrt(Dhx*Dhx + Dvx*Dvx);
+%        DDhx = Dh(i,:)'*Dhx;
+%        DDvx = Dv(i,:)'*Dvx;
+%        if(s<0.1)
+%            s = 0.1;
+%        end
+%        gradf =  gradf + (1/s) * (DDhx+DDvx);
+%      end
+
+function gradf2 = gradf2Fun(x,Dv,Dh)
+maxiter = length(x);
+gradf2 = zeros(maxiter,maxiter);
+
+for i = 1:maxiter
+         Dhx = Dh(i,:)* x;
+         Dvx = Dh(i,:)* x;
+         s = 
+end
+

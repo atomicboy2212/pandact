@@ -1,0 +1,16 @@
+      
+%1st gradient of the objective function     
+ function gradf = gradFun(x,Dv,Dh)
+     maxiter = length(x);
+     gradf = zeros(maxiter,1);
+     for i =1 :maxiter
+       Dhx = Dh(i,:)* x;
+       Dvx = Dv(i,:)* x;
+       s = sqrt(Dhx*Dhx + Dvx*Dvx);
+       DDhx = Dh(i,:)'*Dhx;
+       DDvx = Dv(i,:)'*Dvx;
+       if(s<0.1)
+           s = 0.1;
+       end
+       gradf =  gradf + (1/s) * (DDhx+DDvx);
+     end

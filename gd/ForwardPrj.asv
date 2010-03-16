@@ -1,0 +1,14 @@
+function det = ForwardPrj(xSrc,ySrc,xDet,yDet,angle,image)
+
+cosAngle = cosd(angle);
+sinAngle = sind(angle);
+
+xSrcR = cosAngle*xSrc + sinAngle * ySrc;
+ySrcR = cosAngle*xSrc - sinAngle * ySrc;
+
+xDetR = cosAngle*xDet + sinAngle * yDet;
+yDetR = cosAngle*xDet - sinAngle * yDet;
+
+%
+SrcLen = length(xSrc);
+for iter = 1
